@@ -1,5 +1,5 @@
 name: 'Get JIRA tickets out of a GitHub Release'
-description: 'This action will enable you to get all JIRA tickets out of a GitHub release's included PRs'
+description: 'This action will enable you to get all JIRA tickets out of a GitHub releaseÒs included PRs'
 inputs:
   repo:
     description: 'Repository to get release from'
