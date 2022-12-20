@@ -91,11 +91,9 @@ const main = async () => {
           console.log(jiraTickets);
         };
       
-        getPrs().then((res) => {
-          return;
-        }).finally(fin => {
-          core.setOutput("jiraTickets", jiraTickets);
-        });
+        await getPrs();
+        core.setOutput("jiraTickets", jiraTickets);
+
       
         // Get the JSON webhook payload for the event that triggered the workflow
         const payload = JSON.stringify(github.context.payload, undefined, 2);
