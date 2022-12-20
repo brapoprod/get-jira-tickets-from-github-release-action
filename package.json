@@ -1,0 +1,28 @@
+{
+  "name": "get-jira-tickets-from-github-release-action",
+  "version": "1.0.0",
+  "description": "This action will enable you to get all JIRA tickets out of a GitHub release",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brapoprod/get-jira-tickets-from-github-release-action.git"
+  },
+  "keywords": [
+    "JIRA",
+    "GitHub"
+  ],
+  "author": "brapoprod",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brapoprod/get-jira-tickets-from-github-release-action/issues"
+  },
+  "homepage": "https://github.com/brapoprod/get-jira-tickets-from-github-release-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "axios": "^1.2.1"
+  }
+}
