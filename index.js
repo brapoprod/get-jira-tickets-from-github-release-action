@@ -51,21 +51,6 @@ const main = async () => {
           }
         };
       
-        const getJiraQuery = (tickets) => {
-          const replaceString = "$TO_REPLACE";
-          const baseUrl = `https://support.chili-publish.com/issues/?jql=(project%20%3D%20WRS%20or%20project%20%3D%20EDT%20or%20project%20%3D%20GRAFX)%20and%20key%20in%20(${replaceString})`;
-      
-          let ticketString = "";
-      
-          for (let index = 0; index < tickets.length; index++) {
-            const ticket = tickets[index];
-            if (index !== 0) ticketString += "%2C";
-            ticketString += ticket;
-          }
-      
-          return baseUrl.replace(replaceString, ticketString);
-        };
-      
         const getPrs = async () => {
           for (let index = 0; index < prNumbers.length; index++) {
             // Get the PR
