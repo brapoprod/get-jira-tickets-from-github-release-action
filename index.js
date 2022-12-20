@@ -15,7 +15,7 @@ const main = async () => {
           `https://api.github.com/repos/${repo}/releases`,
           {
             headers: {
-              Authorization: `token ${token}`,
+              Authorization: `token ${pat}`,
             },
           }
         );
@@ -73,7 +73,7 @@ const main = async () => {
               `https://api.github.com/repos/${repo}/pulls/${prNumbers[index]}`,
               {
                 headers: {
-                  Authorization: `token ${token}`,
+                  Authorization: `token ${pat}`,
                 },
               }
             );
