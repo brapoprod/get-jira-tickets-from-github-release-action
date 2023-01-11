@@ -32,7 +32,7 @@ const main = async () => {
       
         // Extract the PR numbers from the release body
         const prNumbers = [];
-        const body = latestRelease.body;
+        const body = release.body;
         const lines = body.split("\n");
         lines.forEach((line) => {
           const start = "pull/";
