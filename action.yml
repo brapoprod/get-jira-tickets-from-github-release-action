@@ -13,7 +13,7 @@ inputs:
     required: true
     default: ''
   releaseName:
-    description: 'The GitHub Release's name that you want to grab the tickets from.'
+    description: 'The GitHub Releases name that you want to grab the tickets from.'
     required: false
     default: 'latest'  
 outputs:
