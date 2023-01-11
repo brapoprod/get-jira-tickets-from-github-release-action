@@ -9,6 +9,10 @@ This action will enable you to get all JIRA tickets out of the latest GitHub rel
 ### `PAT`
 **Required** The GitHub Personal Access Token which has read access to the repository's release information
 
+### `releaseName`
+The GitHub Release's name that you want to grab the tickets from.
+**Default** latest
+
 ## Outputs
 
 ### `jiraTickets`

@@ -12,6 +12,10 @@ inputs:
     description: 'Personal access token with read access to the repositories releases'
     required: true
     default: ''
+  releaseName:
+    description: 'The GitHub Release's name that you want to grab the tickets from.'
+    required: false
+    default: 'latest'  
 outputs:
   jiraTickets: # id of output
     description: 'The tickets mentioned in the description of the PRs'

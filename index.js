@@ -9,7 +9,8 @@ const main = async () => {
         const repo = core.getInput("repo");
         console.log(`Getting latest release from ${repo}`);
         const pat = core.getInput("PAT");
-      
+        const releaseToFetch = core.getInput("releaseName");
+        
         // Get the list of releases for the repository
         const releasesResponse = await axios.get(
           `https://api.github.com/repos/${repo}/releases`,
@@ -19,9 +20,15 @@ const main = async () => {
             },
           }
         );
-      
-        // Find the latest release
-        const latestRelease = releasesResponse.data[0];
+
+        let release;
+
+        // get the correct release or the latest
+        if (releaseToFetch !== 'latest' || releaseToFetch !== '') {
+          release = releasesResponse.data.find(rel => rel.name === releaseToFetch)
+        } else {
+          release = releasesResponse.data[0];
+        }
       
         // Extract the PR numbers from the release body
         const prNumbers = [];
