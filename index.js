@@ -24,7 +24,7 @@ const main = async () => {
         let release;
 
         // get the correct release or the latest
-        if (releaseToFetch !== 'latest' || releaseToFetch !== '') {
+        if (releaseToFetch !== 'latest' && releaseToFetch !== '') {
           release = releasesResponse.data.find(rel => rel.name === releaseToFetch);
         } else {
           release = releasesResponse.data[0];
